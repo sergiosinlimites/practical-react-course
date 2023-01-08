@@ -4,7 +4,7 @@ import '../styles/RecoverPassword.scss';
 
 const RecoverPassword = () => {
   return (
-    <div class="login">
+    <div class="RecoverPassword">
     <div class="form-container">
       <img src={logo} alt="logo" class="logo" />
 
@@ -15,7 +15,7 @@ const RecoverPassword = () => {
         <img src={email} alt="email" />
       </div>
 
-      <button class="primary-button login-button">Login</button>
+      <button class="primary-button RecoverPassword-button">Login</button>
 
       <p class="resend">
         <span>Didn't receive the email?</span>
