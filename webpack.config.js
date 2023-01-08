@@ -10,6 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -21,7 +22,18 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              [
+                '@babel/preset-react',
+                {
+                  runtime: 'automatic',
+                }
+              ],
+            ]
+          }
         }
       },
       {
@@ -31,11 +43,22 @@ module.exports = {
         }],
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(css|scss)$/i,
         use: [
           'style-loader',
           'css-loader',
           'sass-loader'
+        ]
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[hash]-[name].[ext]'
+            }
+          }
         ]
       }
     ]
@@ -53,6 +76,7 @@ module.exports = {
     static: path.join(__dirname, 'public'),
     compress: false,
     port: 8080,
+    historyApiFallback: true
   },
   performance: {
     maxAssetSize: 488 * 1024,
