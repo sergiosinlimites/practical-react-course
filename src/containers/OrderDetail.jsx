@@ -11,24 +11,17 @@ const OrderDetail = () => {
 
   const accumulateProducts = products => {
     const arrangedProducts = [];
-    products.forEach((product) => {
-      const existingProduct = arrangedProducts.find(p => p.id === product.id);
-      if(existingProduct){
-        existingProduct.price += product.price;
-      } else  {
-        arrangedProducts.push(product);
+    for(let product of products){
+      const freezedObject = Object.assign({} ,product);
+      const found = arrangedProducts.find(p => p.id === freezedObject.id);
+      if(found){
+        const index = arrangedProducts.indexOf(found);
+        arrangedProducts[index].price += freezedObject.price;
+      } else {
+        arrangedProducts.push(freezedObject);
       }
-    })
+    }
     return arrangedProducts;
-    // return products.reduce((accumulator, product) => {
-    //   const existingProduct = accumulator.find(p => p.id === product.id);
-    //   if(existingProduct){
-    //     existingProduct.price += Number(product.price);
-    //   } else {
-    //     accumulator.push(product);
-    //   }
-    //   return accumulator;
-    // }, []);
   }
 
   useEffect(() => {
