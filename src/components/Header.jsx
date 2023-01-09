@@ -56,7 +56,7 @@ const Header = () => {
         <ul>
           <li className="navbar-email" onClick={handleToggle}>
             platzi@example.com
-            </li>
+          </li>
           <li className="navbar-shopping-cart" onClick={handleToggleOrder}>
             <img src={cartImage} alt="shopping cart" />
             { cart.length > 0 && <div>{verifyCartNumber(cart.length)}</div> }

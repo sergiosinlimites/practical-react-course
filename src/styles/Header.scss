@@ -1,5 +1,9 @@
 @use 'vars';
-nav {
+.Header {
+  position: fixed;
+  box-sizing: border-box;
+  width:100%;
+  background-color: var(--white);
   display: flex;
   justify-content: space-between;
   padding: 0 24px;
@@ -51,8 +55,9 @@ nav {
 }
 
 .navbar-shopping-cart {
-  position: relative;
   cursor: pointer;
+  position: relative;
+  display: flex;
 }
 .navbar-shopping-cart div {
   width: 16px;
