@@ -1,16 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react';
+import AppContext from '@context/AppContext';
 import Menu from '@components/Menu';
 import menu from "@icons/icon_menu.svg";
 import logo from "@logos/logo_yard_sale.svg";
-import cart from "@icons/icon_shopping_cart.svg";
+import cartImage from "@icons/icon_shopping_cart.svg";
 import '@styles/Header.scss';
 
 const Header = () => {
 
   const [toggle, setToggle] = useState(false);
 
+  const { state: {cart} } = useContext(AppContext);
+
   const handleToggle = () => {
     setToggle(!toggle);
+  }
+
+  const verifyCartNumber = (length) => {
+    return length <= 9 ? length : '+9';
   }
 
   return (
@@ -45,8 +52,8 @@ const Header = () => {
             platzi@example.com
             </li>
           <li className="navbar-shopping-cart">
-            <img src={cart} alt="shopping cart" />
-            <div>2</div>
+            <img src={cartImage} alt="shopping cart" />
+            { cart.length > 0 && <div>{verifyCartNumber(cart.length)}</div> }
           </li>
         </ul>
       </div>

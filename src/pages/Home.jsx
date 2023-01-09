@@ -1,8 +1,12 @@
 import Header from "@components/Header";
+import ProductsList from '@containers/ProductsList';
 
 const Home = () => {
   return (
-    <Header />
+    <div>
+      <Header />
+      <ProductsList />
+    </div>
   );
 }
 
