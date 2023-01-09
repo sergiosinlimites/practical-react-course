@@ -4,6 +4,7 @@ import Layout from '@containers/Layout';
 import Login from '@containers/Login';
 import Home from '@pages/Home';
 import NotFound from '@pages/NotFound';
+import NewPassword from '@containers/NewPassword';
 import RecoverPassword from '@containers/RecoverPassword';
 import Products from '@pages/Products';
 import Orders from '@pages/Orders';
@@ -18,7 +19,8 @@ const App = () => {
         <Routes>
           <Route exact path='/' element={ <Home /> }></Route>
           <Route exact path='/login' element={ <Login /> }></Route>
-          <Route exact path='/recover' element={ <RecoverPassword /> }></Route>
+          <Route exact path='/forgot' element={ <NewPassword /> }></Route>
+          <Route exact path='/email-forgot' element={ <RecoverPassword /> }></Route>
           <Route exact path='/products' element={ <Products /> }></Route>
           <Route exact path='/categories' element={ <Categories /> }></Route>
           <Route exact path='/checkout' element={ <Checkout /> }></Route>
