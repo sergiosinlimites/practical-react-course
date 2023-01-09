@@ -4,11 +4,10 @@ import addToCartImage from '@icons/bt_add_to_cart.svg';
 import '@styles/Product.scss';
 
 const Product = ({ product }) => {
-  const { addToCart, state } = useContext(AppContext)
+  const { addToCart } = useContext(AppContext)
 
   const handleClick = item => {
     addToCart(item);
-    console.log(state.cart);
   }
   
   return (

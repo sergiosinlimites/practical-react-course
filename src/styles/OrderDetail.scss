@@ -6,6 +6,9 @@
   box-sizing: border-box;
   position: absolute;
   right: 0;
+  top: 60px;
+  bottom: 0;
+  background-color: var(--very-light-pink);
 }
 .title-container {
   display: flex;
