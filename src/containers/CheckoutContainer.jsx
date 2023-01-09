@@ -1,6 +1,6 @@
-import CheckoutItem from "../components/CheckoutItem";
-import CheckoutTotal from "../components/CheckoutTotal";
-import '../styles/CheckoutContainer.scss';
+import CheckoutItem from "@components/CheckoutItem";
+import CheckoutTotal from "@components/CheckoutTotal";
+import '@styles/CheckoutContainer.scss';
 
 const CheckoutContainer = () => {
   return (

@@ -1,5 +1,5 @@
-import '../styles/Order.scss';
-import flecha from '../../public/assets/icons/flechita.svg';
+import '@styles/Order.scss';
+import flecha from '@icons/flechita.svg';
 
 const Order = () => {
   return (

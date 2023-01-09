@@ -1,4 +1,4 @@
-import '../styles/OldOrders.scss';
+import '@styles/OldOrders.scss';
 
 const OldOrders = ({ children }) => {
   return (

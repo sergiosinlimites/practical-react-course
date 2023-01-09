@@ -1,5 +1,5 @@
-import '../styles/ProductDetail.scss';
-import close from '../../public/assets/icons/icon_close.png';
+import '@styles/ProductDetail.scss';
+import close from '@icons/icon_close.png';
 import ProductInfo from './ProductInfo';
 
 const ProductDetail = () => {

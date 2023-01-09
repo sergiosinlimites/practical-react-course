@@ -1,4 +1,4 @@
-import '../styles/CheckoutTotal.scss';
+import '@styles/CheckoutTotal.scss';
 
 const CheckoutTotal = () => {
   return (

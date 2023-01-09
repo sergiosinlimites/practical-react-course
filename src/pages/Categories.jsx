@@ -1,6 +1,6 @@
-import CategoriesList from "../containers/CategoriesList";
-import Menu from "../containers/Menu";
-import '../styles/Categories.scss';
+import CategoriesList from "@containers/CategoriesList";
+import Menu from "@containers/Menu";
+import '@styles/Categories.scss';
 
 const Categories = () => {
   return (

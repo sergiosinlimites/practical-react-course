@@ -1,7 +1,7 @@
-import menu from "../../public/assets/icons/icon_menu.svg";
-import logo from "../../public/assets/logos/logo_yard_sale.svg";
-import cart from "../../public/assets/icons/icon_shopping_cart.svg";
-import '../styles/Header.scss';
+import menu from "@icons/icon_menu.svg";
+import logo from "@logos/logo_yard_sale.svg";
+import cart from "@icons/icon_shopping_cart.svg";
+import '@styles/Header.scss';
 
 const Header = () => {
   return (

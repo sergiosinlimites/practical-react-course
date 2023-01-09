@@ -1,6 +1,6 @@
-import flecha from '../../public/assets/icons/flechita.svg';
-import close from '../../public/assets/icons/icon_close.png';
-import '../styles/OrderDetail.scss';
+import flecha from '@icons/flechita.svg';
+import close from '@icons/icon_close.png';
+import '@styles/OrderDetail.scss';
 
 const OrderDetail = () => {
   return (

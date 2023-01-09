@@ -1,6 +1,6 @@
-import OldOrders from "../containers/OldOrders";
-import Order from '../components/Order';
-import '../styles/CheckoutContainer.scss';
+import OldOrders from "@containers/OldOrders";
+import Order from '@components/Order';
+import '@styles/CheckoutContainer.scss';
 
 const Orders = () => {
   return (

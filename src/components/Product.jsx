@@ -1,5 +1,5 @@
-import addToCart from '../../public/assets/icons/bt_add_to_cart.svg';
-import '../styles/Product.scss';
+import addToCart from '@icons/bt_add_to_cart.svg';
+import '@styles/Product.scss';
 
 const Product = () => {
   return (

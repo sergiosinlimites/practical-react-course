@@ -1,4 +1,4 @@
-import '../styles/CheckoutItem.scss';
+import '@styles/CheckoutItem.scss';
 
 const CheckoutItem = () => {
   return (

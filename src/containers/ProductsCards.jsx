@@ -1,4 +1,4 @@
-import '../styles/ProductsCards.scss';
+import '@styles/ProductsCards.scss';
 
 const ProductsCards = ({children}) => {
   return (
