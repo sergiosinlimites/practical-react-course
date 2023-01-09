@@ -1,10 +1,10 @@
-import Product from '@components/Product';
+import ProductsList from '../containers/ProductsList';
 
 const Products = () => {
   return (
-  <section className="Products">
-    <Product />
-  </section>
+    <section className="Products">
+      <ProductsList />
+    </section>
   );
 }
 

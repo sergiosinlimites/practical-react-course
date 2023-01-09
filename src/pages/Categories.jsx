@@ -1,5 +1,5 @@
 import CategoriesList from "@containers/CategoriesList";
-import Menu from "@containers/Menu";
+import Menu from "@components/Menu";
 import '@styles/Categories.scss';
 
 const Categories = () => {
