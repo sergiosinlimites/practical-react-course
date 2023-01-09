@@ -2,11 +2,11 @@ import { useContext, useEffect, useState } from 'react';
 import AppContext from '@context/AppContext';
 import OrderProduct from '../components/OrderProduct';
 import flecha from '@icons/flechita.svg';
-import close from '@icons/icon_close.png';
 import '@styles/OrderDetail.scss';
 
 const OrderDetail = () => {
   const [accumulatedProducts, setAccumulatedProducts] = useState([]);
+  const [total, setTotal] = useState(0);
   const { state: { cart } } = useContext(AppContext);
 
   const accumulateProducts = products => {
@@ -24,9 +24,17 @@ const OrderDetail = () => {
     return arrangedProducts;
   }
 
+  const sumTotal = products => {
+    const total = products.reduce((accumulator, product) => Number(accumulator) + Number(product.price), [0]);
+    setTotal(total);
+  }
+
   useEffect(() => {
     if(cart){
+      console.log('se actualiza')
+      console.log(cart)
       const acumulated = accumulateProducts(cart);
+      sumTotal(cart);
       setAccumulatedProducts(acumulated);
     }
   }, [cart])
@@ -38,18 +46,16 @@ const OrderDetail = () => {
         <p className="title">My order</p>
       </div>
       <div className="my-order-content">
-        
         {
           accumulatedProducts.map((product, index) => (
             <OrderProduct product={product} key={`${index}-orderItem-${product.id}`} />
           ))
         }
-        
         <div className="order">
           <p>
             <span>Total</span>
           </p>
-          <p>$560.00</p>
+          <p>${total}</p>
         </div>
         <button className="primary-button">
           Checkout

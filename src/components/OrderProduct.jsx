@@ -1,7 +1,15 @@
 import '@styles/OrderProduct.scss';
+import AppContext from '@context/AppContext';
 import close from '@icons/icon_close.png';
+import { useContext } from 'react';
 
 const OrderProduct = ({ product }) => {
+  const { removeFromCart } = useContext(AppContext);
+
+  const handleRemoveProduct = (id) => {
+    removeFromCart(id)
+  }
+
   return (
     <div className="OrderProduct">
       <figure>
@@ -9,7 +17,7 @@ const OrderProduct = ({ product }) => {
       </figure>
       <p>{ product.title }</p>
       <p>${ product.price }</p>
-      <img src={close} alt="close" />
+      <img src={close} alt="close" onClick={() => handleRemoveProduct(product.id)} />
     </div>
   );
 }
